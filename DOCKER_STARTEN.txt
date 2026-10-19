@@ -1,0 +1,39 @@
+PORTFOLIO STARTEN MET DOCKER
+============================
+
+VEREIST
+- Docker Desktop (Windows/Mac) of Docker Engine + Docker Compose (Linux).
+
+STARTEN OP JE EIGEN COMPUTER
+1. Pak deze zip uit.
+2. Open de map Portfolio in Visual Studio Code of Verkenner.
+3. Open een terminal in die map. Daar moeten Dockerfile en compose.yaml staan.
+4. Voer uit:
+
+   docker compose up --build -d
+
+5. Open in je browser:
+
+   http://localhost:3000
+
+HANDIGE COMMANDO'S
+- Logs bekijken:  docker compose logs -f portfolio
+- Stoppen:        docker compose down
+- Opnieuw bouwen na wijzigingen: docker compose up --build -d
+
+CONTACTFORMULIER / E-MAIL
+De website kan zonder SMTP-instellingen starten, maar het contactformulier kan dan geen e-mails versturen.
+Als je het formulier wilt activeren:
+1. Kopieer .env.example naar een nieuw bestand met de naam .env.
+2. Vul in .env je echte SMTP-host, gebruikersnaam, wachtwoord/app-wachtwoord,
+   afzender en ontvanger in. Gebruik de gegevens van je e-mailprovider.
+3. Stel SITE_URL in op je publieke URL als je er een domeinnaam aan koppelt.
+4. Start opnieuw met: docker compose up --build -d
+
+Bewaar .env privé en deel het niet publiek, want daarin kunnen wachtwoorden staan.
+
+OP EEN SERVER OP HET INTERNET
+De stappen hierboven maken de site bereikbaar op poort 3000 van de computer waarop Docker draait.
+Om de site publiek via een domeinnaam aan te bieden, heb je ook een server met Docker nodig,
+plus een domeinnaam/DNS en een reverse proxy met HTTPS (TLS). Alleen deze container starten
+maakt de site niet automatisch openbaar op het internet.

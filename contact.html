@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Neem contact op met Olivier Kann, leerling Applicatie- en Databeheer met interesse in webontwikkeling en gameprogrammeren.">
+    <meta name="theme-color" content="#101512">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="nl_BE">
+    <meta property="og:title" content="Contact | Olivier Kann">
+    <meta property="og:description"
+        content="Stuur Olivier Kann een bericht over zijn portfolio, projecten of interesse in webontwikkeling.">
+    <title>Contact | Olivier Kann</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <script src="js/contact.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content" aria-label="Ga naar de hoofdinhoud">Ga naar de hoofdinhoud</a>
+    <header>
+        <h1>Contact</h1>
+        <p>Olivier Kann — Applicatie- en Databeheer</p>
+    </header>
+
+    <nav aria-label="Hoofdnavigatie">
+        <ul>
+            <li><a href="index.html" aria-label="Ga naar Home">Home</a></li>
+            <li><a href="about.html" aria-label="Ga naar Over mij">Over mij</a></li>
+            <li><a href="skills.html" aria-label="Ga naar Skills">Skills</a></li>
+            <li><a class="actief" href="contact.html" aria-label="Ga naar Contact" aria-current="page">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="page">
+        <main id="main-content">
+            <section id="contact">
+                <h2>Neem contact op</h2>
+                <p>Je kunt me mailen via <a href="mailto:kannolivier@gmail.com"
+                        aria-label="Mail Olivier Kann">kannolivier@gmail.com</a></p>
+            </section>
+
+            <section>
+                <h2>Stuur een bericht</h2>
+                <p>Laat een bericht achter via het contactformulier.</p>
+                <form action="/api/contact" method="post" aria-label="Contactformulier van Olivier Kann"
+                    data-contact-form>
+                    <label for="naam">Naam</label>
+                    <input id="naam" name="naam" type="text" autocomplete="name" maxlength="80" aria-label="Naam"
+                        required>
+
+                    <label for="email">E-mail</label>
+                    <input id="email" name="email" type="email" autocomplete="email" maxlength="254"
+                        aria-label="E-mailadres" required>
+
+                    <label for="bericht">Bericht</label>
+                    <textarea id="bericht" name="bericht" rows="5" maxlength="2000" aria-label="Bericht"
+                        required></textarea>
+
+                    <div class="form-trap" aria-hidden="true">
+                        <label for="website">Laat dit veld leeg</label>
+                        <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <button type="submit" aria-label="Verstuur contactbericht">Verstuur bericht</button>
+                    <p class="form-status" role="status" aria-live="polite" data-form-status></p>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        &copy; Olivier Kann 2026 — WICO Neerpelt
+    </footer>
+</body>
+
+</html>

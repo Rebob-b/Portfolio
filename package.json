@@ -1,0 +1,17 @@
+{
+    "name": "olivier-kann-portfolio",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Portfolio website met SMTP-contactbackend",
+    "main": "server.js",
+    "scripts": {
+        "start": "node --env-file-if-exists=.env server.js",
+        "dev": "node --watch --env-file-if-exists=.env server.js"
+    },
+    "engines": {
+        "node": ">=20.6"
+    },
+    "dependencies": {
+        "nodemailer": "^10.0.10"
+    }
+}

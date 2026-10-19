@@ -1,0 +1,195 @@
+/* Een korte entree per pagina; herhaalde interacties blijven met transitions. */
+main>section {
+    animation: section-enter 460ms var(--ease-out) both;
+}
+
+main>section:nth-of-type(1) {
+    animation-delay: 90ms;
+}
+
+main>section:nth-of-type(2) {
+    animation-delay: 150ms;
+}
+
+main>section:nth-of-type(3) {
+    animation-delay: 210ms;
+}
+
+main>section:nth-of-type(4) {
+    animation-delay: 270ms;
+}
+
+header {
+    animation: masthead-enter 520ms var(--ease-out) both;
+}
+
+header h1 {
+    animation: title-enter 440ms 70ms var(--ease-out) both;
+}
+
+header p {
+    animation: title-enter 420ms 130ms var(--ease-out) both;
+}
+
+nav li {
+    animation: nav-enter 340ms var(--ease-out) both;
+}
+
+nav li:nth-child(1) {
+    animation-delay: 100ms;
+}
+
+nav li:nth-child(2) {
+    animation-delay: 150ms;
+}
+
+nav li:nth-child(3) {
+    animation-delay: 200ms;
+}
+
+nav li:nth-child(4) {
+    animation-delay: 250ms;
+}
+
+.kaart {
+    animation: card-enter 400ms var(--ease-out) both;
+}
+
+.project-kaart {
+    animation: card-enter 400ms var(--ease-out) both;
+}
+
+.kaart:nth-child(1) {
+    animation-delay: 160ms;
+}
+
+.kaart:nth-child(2) {
+    animation-delay: 220ms;
+}
+
+.kaart:nth-child(3) {
+    animation-delay: 280ms;
+}
+
+.project-kaart:nth-child(1) {
+    animation-delay: 160ms;
+}
+
+.project-kaart:nth-child(2) {
+    animation-delay: 220ms;
+}
+
+.project-kaart:nth-child(3) {
+    animation-delay: 280ms;
+}
+
+ul.lijst li,
+.skill-lijst li {
+    animation: list-enter 340ms var(--ease-out) both;
+}
+
+ul.lijst li:nth-child(1),
+.skill-lijst li:nth-child(1) {
+    animation-delay: 120ms;
+}
+
+ul.lijst li:nth-child(2),
+.skill-lijst li:nth-child(2) {
+    animation-delay: 180ms;
+}
+
+ul.lijst li:nth-child(3),
+.skill-lijst li:nth-child(3) {
+    animation-delay: 240ms;
+}
+
+ul.lijst li:nth-child(4),
+.skill-lijst li:nth-child(4) {
+    animation-delay: 300ms;
+}
+
+footer {
+    animation: fade-enter 320ms 160ms ease-out both;
+}
+
+@keyframes masthead-enter {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes title-enter {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes nav-enter {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes section-enter {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes card-enter {
+    from {
+        opacity: 0;
+        transform: translateY(14px) scale(.99);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes list-enter {
+    from {
+        opacity: 0;
+        transform: translateX(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-enter {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

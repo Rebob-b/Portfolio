@@ -1,0 +1,143 @@
+@media (min-width: 375px) {
+    .page {
+        width: calc(100% - 44px);
+    }
+}
+
+@media (min-width: 768px) {
+    .page {
+        width: calc(100% - 64px);
+    }
+
+    .kaarten {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    main {
+        padding: 72px 0 88px;
+    }
+}
+
+@media (min-width: 1024px) {
+    header {
+        padding: 68px 24px 60px;
+    }
+
+    header h1 {
+        font-size: 3.5rem;
+    }
+
+    .kaarten {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 42px 20px 38px;
+    }
+
+    nav ul {
+        gap: 8px 20px;
+        padding: 10px 14px;
+    }
+
+    main {
+        padding: 52px 0 60px;
+    }
+}
+
+@media (max-width: 374px) {
+    header {
+        padding: 38px 16px 34px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .page {
+        width: calc(100% - 28px);
+    }
+
+    nav ul {
+        gap: 6px 16px;
+        padding: 10px 12px;
+    }
+
+    main {
+        padding: 42px 0 54px;
+    }
+
+    h2 {
+        font-size: 1.55rem;
+    }
+
+    section {
+        margin-bottom: 34px;
+    }
+
+    .intro-actions .knop {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Houd een zachte fade; vermijd verplaatsing bij verminderde beweging. */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    header,
+    header h1,
+    header p,
+    nav li,
+    main>section,
+    .kaart,
+    .project-kaart,
+    ul.lijst li,
+    .skill-lijst li,
+    footer {
+        animation-name: fade-enter;
+        animation-duration: 160ms;
+        animation-delay: 0ms;
+    }
+
+    .kaart,
+    .project-kaart,
+    .skill-lijst li {
+        transition: border-color 160ms ease, box-shadow 160ms ease;
+    }
+
+    .kaart:hover,
+    .project-kaart:hover,
+    .skill-lijst li:hover,
+    button:hover,
+    .knop:hover {
+        transform: none;
+    }
+
+    nav a::after {
+        transition: none;
+    }
+
+    button,
+    .knop {
+        transition: background-color 160ms ease;
+    }
+
+    button:active,
+    .knop:active {
+        transform: none;
+    }
+}
